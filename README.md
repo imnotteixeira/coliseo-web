@@ -18,6 +18,8 @@ In this mode, the server itself creates an internal webpack dev server to serve 
 
 It will start the web application on `http://localhost:8081`
 
+In order to use Docker/Docker Compose for the local development workflow (with local overrides of dependencies, such as the `coliseo` engine!), follow the instructions in [coliseo-development-workspace-setup](https://github.com/imnotteixeira/coliseo-development-workspace-setup)
+
 ## Production
 
 This mode implies two service running separately: the `web-server` (backend); and the `assets-server` (frontend)
