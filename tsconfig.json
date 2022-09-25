@@ -10,7 +10,8 @@
         "noFallthroughCasesInSwitch": true,
         "noImplicitReturns": true,
         "noEmitOnError": true,
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "preserveSymlinks": true
     },
     "exclude": [
         "node_modules"

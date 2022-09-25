@@ -1,11 +1,12 @@
+import express from 'express';
+import path from 'path';
 import { version as reactVersion } from 'react';
 import { version as reactDomVersion } from 'react-dom/server';
 import { containerId } from '../shared/constants';
 
-import path from 'path';
 import ssrEntryPoint, { appProps } from './ssr';
+import apiRoutes from "./api"
 
-import express from 'express';
 
 console.log('Server booting...');
 const isProd = process.env.NODE_ENV === 'production';
@@ -56,5 +57,8 @@ app.get("/", (req, res) => {
         })
     })
 });
+
+// API endpoints
+app.use("/api", apiRoutes())
 
 app.listen(PORT, () => { console.log(`Server started! Listening on ${PORT}`) })
